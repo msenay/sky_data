@@ -37,8 +37,8 @@ analyze the weather data and make forecasts.
 
 This project requires Python 3.6+ and the following Python libraries installed:
 
-pandas
-numpy
+* pandas
+* numpy
 
 To install these libraries and other dependencies, you can use the provided requirements.txt file. 
 In your terminal, navigate to the project directory and run the following command:
