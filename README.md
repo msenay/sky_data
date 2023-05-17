@@ -1,29 +1,30 @@
 # Weather Analysis Python Project
 
+
 ### **Introduction**
 
-This project contains Python scripts for analyzing and predicting weather patterns based on historical weather data. 
-The core functionalities include finding the hottest time of the day, selecting certain dates and times based on 
-temperature criteria, and forecasting future temperatures based on historical patterns.
+This project is a Python-based weather data analysis and forecasting tool. 
+It is capable of processing historical weather data to extract insights and predict future trends. 
+Core functionalities include identifying the hottest times of the day, filtering dates and times based on specific 
+temperature conditions, and forecasting future temperatures based on past patterns.
+
 
 ### **Classes and Methods**
 
-The main class in this project is **WeatherAnalysis** which encapsulates all the functionalities. 
+The core component of the project is the **_WeatherAnalysis_** class, which encapsulates all functionalities.
 
-The class includes the following methods:
-___init__(self, data: Union[str, DataFrame])_: Initializes the class with a DataFrame or a URL pointing to a CSV file 
-containing the weather data.
+The **_WeatherAnalysis_** class includes the following methods:
 
-_load_data_from_csv_(self, csv_url: str): This method is used to load weather data from a CSV file.
+* __init__(self, data: Union[str, DataFrame]): Initializes the class with a DataFrame or a URL pointing to a CSV file containing the weather data.
 
-_analyze_daily_max_temperatures_: This method analyzes the outside temperature data and writes the results to a file. 
-It returns the average time of the hottest temperature of the day and the most common hottest time of the day.
+* load_data_from_csv(self, csv_url: str): Loads weather data from a CSV file.
 
-_write_filtered_dates_and_times_: This method selects certain dates and times based on the temperature criteria and 
-writes the selected dates and times to a file.
+* analyze_daily_max_temperatures(): Analyzes the outside temperature data and writes the results to a file. Returns the average time of the hottest temperature of the day and the most common time of hottest temperature.
 
-_forecast_next_month_temperatures_: This method forecasts future temperatures based on historical weather patterns and 
-writes the forecasted temperatures to a file.
+* write_filtered_dates_and_times(): Selects dates and times based on specific temperature criteria, writing the selected dates and times to a file.
+
+* forecast_next_month_temperatures(): Forecasts future temperatures based on historical weather patterns, writing the forecasted temperatures to a file.
+
 
 ### **How to use**
 
@@ -32,16 +33,23 @@ CSV file containing the weather data as input. Then, you can call the methods de
 analyze the weather data and make forecasts.
 
 
+### **Dependencies**
+
+This project requires Python 3.6+ and the following Python libraries installed:
+
+pandas
+numpy
+
+To install these libraries and other dependencies, you can use the provided requirements.txt file. 
+In your terminal, navigate to the project directory and run the following command:
+
+`pip install -r requirements.txt`
+
 
 #### To run the main.py in order to get the results in results directory
 
 `python3 main.py`
 
-### **Dependencies**
-
-pandas
-datetime
-typing
 
 ### Note
 
@@ -50,6 +58,7 @@ when an error occurs. The methods are already designed to print the error messag
 
 The project also includes a unit test script (TestWeatherDataFunctions) to test the functionalities of 
 the WeatherAnalysis class and also includes test for utils and decorators.
+
 
 #### To Run the tests
 `python -m unittest discover`
